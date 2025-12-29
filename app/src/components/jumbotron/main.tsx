@@ -1,12 +1,13 @@
 import JumboHead from "./jumbo-head"
 import GyroCard from "./GyroCard"
 import JumboInfo from "./Jumbo-info"
+import "./main.css"
 
 export default function Jumbotron(){
     return (
         <header className="w-full h-svh flex flex-col">
             <JumboHead />
-            <div className="grow flex items-center justify-center px-4 lg:px-26 z-20 ">
+            <div className="grow flex items-center justify-center px-2 lg:px-26 z-20 mt-20">
                 <div className="flex flex-col-reverse lg:flex-row items-stretch w-full max-w-[95%]">
                     <JumboInfo />
                     <GyroCard />

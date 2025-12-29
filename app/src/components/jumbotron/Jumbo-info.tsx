@@ -1,6 +1,6 @@
 export default function JumboInfo(){
     return(
-        <section className="basis-3/5 jumbo-intro p-8">
+        <section className="basis-3/5 jumbo-intro p-8 flex flex-col justify-center">
             <h1 className="font-black jumbo-name text-shadow-lg">
                 <span className="text-[#2C3E50]">Hi, I'm </span>
                 <span className="text-[#C94444]">Zharif Aziz</span>

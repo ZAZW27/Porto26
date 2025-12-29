@@ -1,37 +1,30 @@
-import { link } from "fs";
-import React from "react";
-
-const social = [
+// jumbo-head.jsx
+export const social = [ // Export this so GyroCard can use it
+    {name: "GitHub", link: "https://github.com/ZAZW27"}, 
+    {name: "LinkedIn", link: "https://www.linkedin.com/in/zharif-widodo-374a29360..."},
     {name: "Instagram", link: "https://www.instagram.com/zaz.w5"}, 
     {name: "Facebook", link: "https://www.facebook.com/share/1H9mWLQV3S/"}, 
-    {name: "GitHub", link: ""}
-]
+];
 
-function JumboHead(){
+export default function JumboHead(){
     return(
-        <header className=" w-full flex items-center justify-between px-23">
-        {/* logo */}
-            <section className="w-28"> 
-                <img src="icons/ZAZW-logo.png" alt="ZAZW logo" />
-            </section>
-            
-            {/* buttons */}
-            <section className="flex gap-12"> 
-                <button className="">
-                    <img src="icons/Instagram.svg" alt="Instagram btn" />
-                </button>
-                <button>
-                    <img src="icons/Facebook.svg" alt="Facebook Btn" />
-                </button>
-                <button>
-                    <img src="icons/LinedIn.svg" alt="LinkedIn btn" />
-                </button>
-                <button>
-                    <img src="icons/Github.svg" alt="GitHub btn" />
-                </button>
-            </section>
-        </header>
+        /* Changed absolute to relative so it doesn't float over your text */
+        <nav className="w-full flex items-center justify-between px-6 lg:px-23 py-6 absolute z-30">
+            <div className="flex flex-col lg:flex-row items-center justify-between w-full">
+                {/* logo */}
+                <section className="w-24 lg:w-28"> 
+                    <img src="icons/ZAZW-logo.png" alt="ZAZW logo" />
+                </section>
+                
+                {/* buttons - HIDDEN ON MOBILE */}
+                <section className="hidden lg:flex gap-12 items-center"> 
+                    {social.map((btn) => (
+                        <a href={btn.link} key={btn.name} target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform">
+                            <img src={`icons/${btn.name}.svg`} alt={`${btn.name} btn`} />
+                        </a>
+                    ))}
+                </section>
+            </div>
+        </nav>
     )
 }
-
-export default JumboHead; 
