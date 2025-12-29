@@ -16,7 +16,7 @@ export default function Jumbotron(){
             <svg 
                 viewBox="0 0 1500 900" 
                 xmlns="http://www.w3.org/2000/svg" 
-                className="absolute inset-0 mt-20 w-full h-[50svh] lg:h-full pointer-events-none z-10"
+                className="absolute inset-0 mt-20 w-full h-[70svh] lg:h-full pointer-events-none z-10"
                 preserveAspectRatio="none"
                 >
                 <defs>

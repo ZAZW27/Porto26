@@ -36,7 +36,7 @@ export default function GyroCard() {
                 ref={cardRef}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
-                className="lg:w-[367px] lg:h-[537px] bg-white/50 rounded-[20px] cursor-pointer gyroCard"
+                className="w-[367px] h-[537px] bg-white/50 rounded-[20px] cursor-pointer gyroCard"
                 style={{
                     transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
                     transition: 'transform 0.1s ease-out',
