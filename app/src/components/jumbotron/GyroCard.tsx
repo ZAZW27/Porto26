@@ -43,8 +43,8 @@ export default function GyroCard() {
                     transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
                     transition: 'transform 0.1s ease-out',
                     boxShadow: '0 25px 30px -12px rgba(0, 0, 0, 0.2)',
-                    backdropFilter: 'blur(20px)',
-                    WebkitBackdropFilter: 'blur(20px)',
+                    backdropFilter: 'blur(10px)',
+                    WebkitBackdropFilter: 'blur(10px)',
                 }}
             >
                 <div className="w-full h-full flex flex-col items-center justify-center p-8 pointer-events-none">
@@ -57,7 +57,7 @@ export default function GyroCard() {
             </div>
 
             {/* SOCIALS - ONLY VISIBLE ON MOBILE/TABLET */}
-            <div className="flex lg:hidden gap-8 items-center justify-center bg-white/20 p-4 rounded-full backdrop-blur-sm border border-white/30">
+            <div className="flex lg:hidden gap-8 items-center justify-center p-4">
                 {social.map((btn) => (
                     <a href={btn.link} key={btn.name} target="_blank" rel="noreferrer">
                         <img src={`icons/${btn.name}.svg`} alt={`${btn.name} btn`} className="w-12 h-12" />

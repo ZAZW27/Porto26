@@ -9,7 +9,7 @@ export const social = [ // Export this so GyroCard can use it
 export default function JumboHead(){
     return(
         /* Changed absolute to relative so it doesn't float over your text */
-        <nav className="w-full flex items-center justify-between px-6 lg:px-23 py-6 absolute z-30">
+        <nav className="w-full flex items-center justify-between px-6 lg:px-23 py-2 lg:py-4 absolute z-30">
             <div className="flex flex-col lg:flex-row items-center justify-between w-full">
                 {/* logo */}
                 <section className="w-24 lg:w-28"> 
