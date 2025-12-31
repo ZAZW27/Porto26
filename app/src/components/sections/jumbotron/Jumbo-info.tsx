@@ -1,7 +1,9 @@
+import styles from "./jumbotron.module.css";
+
 export default function JumboInfo(){
     return(
-        <section className="basis-3/5 jumbo-intro p-8 flex flex-col justify-center ">
-            <h1 className="font-black jumbo-name text-shadow-lg">
+        <section className={`basis-3/5 ${styles.jumboIntro} p-8 flex flex-col justify-center `}>
+            <h1 className={`font-black ${styles.jumboName} text-shadow-lg`}>
                 <span className="text-[#2C3E50]">Hi, I'm </span>
                 <span className="text-[#C94444]">Zharif Aziz</span>
             </h1>
@@ -15,7 +17,7 @@ export default function JumboInfo(){
                 technologies.
                 </p>
             </div>
-            <div className="jumbo-btns flex gap-6 justify-center lg:justify-start mt-12">
+            <div className={`${styles.jumboBtns} flex gap-6 justify-center lg:justify-start mt-12`}>
                 <button>
                 View My Work
                 </button>

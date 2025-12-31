@@ -9,7 +9,7 @@ export const social = [ // Export this so GyroCard can use it
 export default function JumboHead(){
     return(
         /* Changed absolute to relative so it doesn't float over your text */
-        <nav className="w-full flex items-center justify-between px-6 lg:px-23 py-2 lg:py-4 absolute z-30">
+        <nav className="w-full flex items-center justify-between px-6 lg:px-26 py-2 lg:py-4 absolute z-30">
             <div className="flex flex-col lg:flex-row items-center justify-between w-full">
                 {/* logo */}
                 <section className="w-24 lg:w-28"> 
@@ -20,7 +20,7 @@ export default function JumboHead(){
                 <section className="hidden lg:flex gap-12 items-center"> 
                     {social.map((btn) => (
                         <a href={btn.link} key={btn.name} target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform">
-                            <img src={`icons/${btn.name}.svg`} alt={`${btn.name} btn`} />
+                            <img className=" shadow-md rounded-full" src={`icons/${btn.name}.svg`} alt={`${btn.name} btn`} />
                         </a>
                     ))}
                 </section>

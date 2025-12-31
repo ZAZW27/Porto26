@@ -1,7 +1,7 @@
 import JumboHead from "./jumbo-head"
 import GyroCard from "./GyroCard"
 import JumboInfo from "./Jumbo-info"
-import "./main.css"
+import styles from "./jumbotron.module.css";
 
 export default function Jumbotron(){
     return (

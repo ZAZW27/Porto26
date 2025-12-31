@@ -1,5 +1,5 @@
 "use client"
-import Jumbotron from './src/components/jumbotron/main';
+import Jumbotron from './src/components/sections/jumbotron/Jumbotron';
 
 export default function Home() {
   return (
