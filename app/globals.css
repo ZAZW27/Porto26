@@ -1,6 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 
+:root{
+  --base-color: #F1F5F9; 
+  --prime-color: #C94444; 
+}
+
 body{
-  background-color: #F1F5F9; 
+  background-color: var(--base-color); 
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+p{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: clamp(16px, 2vw, 20px);
+  letter-spacing: 0.01em;
+}
+
+.headline{
+    font-family: 'Blinker', sans-serif;
+    letter-spacing: 0;
+}
+.headline h1 + div{
+    transition: all 200ms ease-out;
+    height: 6px;
+    z-index: 1;
+}
+.headline h1{
+    z-index: 2;
+    transition: color 100ms ease-out;
+    transition-delay: 50ms;
+}
+section:hover .headline h1 + div{
+    width: 110% !important;
+    height: 3.8rem;
+    margin-top: -3.3rem !important;
+    pointer-events: none;
+
+    box-shadow: 0 0 30px var(--prime-color);
+}
+
+section:hover .headline h1{
+  color: var(--base-color);
 }
