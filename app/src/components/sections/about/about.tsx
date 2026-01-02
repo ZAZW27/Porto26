@@ -14,7 +14,7 @@ const outliers = [
 
 export default function AboutMe() {
     return(
-        <section className="w-full px-2 lg:px-26 py-8 lg:pt-24 lg:pb-12 flex flex-col justify-center items-center">
+        <section className="w-full px-2 lg:px-26 py-8 lg:pt-24 lg:pb-20 flex flex-col justify-center items-center">
             <HeadSection title={"About Me"} />
             <div className="w-full lg:max-w-5xl bg-white text-[#555555] shadow-lg px-6 lg:px-12 py-8 rounded-2xl flex flex-col gap-6">
                 <p className="text-justify">
@@ -38,10 +38,10 @@ export default function AboutMe() {
                     architecting reliable systems that provide a seamless experience for the end user.
                 </p>
                 <div className="flex flex-row items-center justify-center gap-4">
-                    {outliers.map((item)=>(
+                    {outliers.map((items)=>(
                         <div className="text-center px-12 py-6 bg-zinc-100/90 rounded-2xl">
-                            <div className="text-5xl font-bold text-red-500">{item.nominals}</div>
-                            <div className="text-sm text-gray-500 mt-2">{item.description}</div>
+                            <div className="text-5xl font-bold text-red-500">{items.nominals}</div>
+                            <div className="text-sm text-gray-500 mt-2">{items.description}</div>
                         </div>
                     ))}
                 </div>
